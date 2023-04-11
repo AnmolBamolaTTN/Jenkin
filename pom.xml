@@ -24,8 +24,8 @@
     <scope>test</scope>
 </dependency>
   	<dependency>
-  		<groupId>Orgnn</groupId>
-  		<artifactId>SeleniumDay1</artifactId>
+  		<groupId>orgm</groupId>
+  		<artifactId>Proo</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
