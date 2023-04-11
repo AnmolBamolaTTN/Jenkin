@@ -22,19 +22,22 @@ private static WebDriver driver;
 	{
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Anmol Bamola\\Downloads\\chromedriver_win32 (1)//chromedriver.exe");
 		 driver=new ChromeDriver();
-		 driver.get("https://www.geogebra.org/scientific");
+		 driver.get("https://mathsolver.microsoft.com/en");
 		  driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		  Thread.sleep(6000); 
+		  
 	}
        
 		@Test
-		public void Home() 
+		public void Home() throws InterruptedException 
 		{
-			driver.findElement(By.xpath("//div[@class=\"gwt-Label\"][1]")).click();
-			driver.findElement(By.xpath("(//div[@class=\"gwt-Label\"])[13]")).click();
-            driver.findElement(By.xpath("//div[@class=\"gwt-Label\"][1]")).click();
-            String ans=driver.findElement(By.xpath("//div[@class=\"gwt-HTML\"]")).getText();
-            System.out.println(ans);
+			
+			driver.findElement(By.xpath("//button[@aria-label=\"7\"]")).click();
+			driver.findElement(By.xpath("//button[@aria-label=\"Add\"]")).click();
+			driver.findElement(By.xpath("//button[@aria-label=\"7\"]")).click();
+			Thread.sleep(4000);
+			System.out.println(driver.findElement(By.xpath("//div[@class=\"GuppyField_ia__128DY\"]")).getText());
+			
+			
 			
 		}
 		
